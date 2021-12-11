@@ -1,0 +1,16 @@
+﻿@model TiendaWeb.Models.Categoria
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Editar</h2>
+<form method="post">
+    <div class="form-group row">
+        <input type="hidden" name="IdCategoria" value="@Model.IdCategoria" />
+        <label class="control-label">Nombre</label>
+        <input type="text" name="nombre" class="form-control" value="@Model.Nombre"/>
+    </div>
+    <a href="@Url.Action("Index","Categoria")" class="btn btn-default">Volver</a>
+    <button class="btn btn-primary">Guardar</button>
+</form>
+
