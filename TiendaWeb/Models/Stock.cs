@@ -11,7 +11,8 @@ namespace TiendaWeb.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Stock
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -19,8 +20,10 @@ namespace TiendaWeb.Models
         {
             this.DetalleVenta = new HashSet<DetalleVenta>();
         }
-    
+        [Key]
         public int IdStock { get; set; }
+        [Display(Name = "Cantidad")]
+        [Required(ErrorMessage = "Cantidad es obligatoria")]
         public int Cantidad { get; set; }
         public int IdJuego { get; set; }
         public int IdLocal { get; set; }

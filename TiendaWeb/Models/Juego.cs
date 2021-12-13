@@ -27,7 +27,7 @@ namespace TiendaWeb.Models
         [MaxLength(50, ErrorMessage = "Código no puede tener más de 50 caracteres")]
         public string Codigo { get; set; }
         [Display(Name = "Juego")]
-        [Required(ErrorMessage = "NOmbre del juego es obligatorio")]
+        [Required(ErrorMessage = "Nombre del juego es obligatorio")]
         public string Nombre { get; set; }
         [Display(Name ="Precio")]
         [Required(ErrorMessage = "El precio es obligatorio")]

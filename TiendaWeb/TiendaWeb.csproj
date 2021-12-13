@@ -132,8 +132,11 @@
     <Compile Include="Controllers\CategoriaController.cs" />
     <Compile Include="Controllers\CompaniasController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InicioController.cs" />
     <Compile Include="Controllers\JuegosController.cs" />
+    <Compile Include="Controllers\LocalsController.cs" />
     <Compile Include="Controllers\PlataformasController.cs" />
+    <Compile Include="Controllers\StocksController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -195,6 +198,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Tienda.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -262,6 +266,18 @@
     <Content Include="Views\Plataformas\Details.cshtml" />
     <Content Include="Views\Plataformas\Edit.cshtml" />
     <Content Include="Views\Plataformas\Index.cshtml" />
+    <Content Include="Views\Stocks\Create.cshtml" />
+    <Content Include="Views\Stocks\Delete.cshtml" />
+    <Content Include="Views\Stocks\Details.cshtml" />
+    <Content Include="Views\Stocks\Edit.cshtml" />
+    <Content Include="Views\Stocks\Index.cshtml" />
+    <Content Include="Views\Locals\Create.cshtml" />
+    <Content Include="Views\Locals\Delete.cshtml" />
+    <Content Include="Views\Locals\Details.cshtml" />
+    <Content Include="Views\Locals\Edit.cshtml" />
+    <Content Include="Views\Locals\Index.cshtml" />
+    <Content Include="Views\Inicio\Inicio.cshtml" />
+    <Content Include="Views\Inicio\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

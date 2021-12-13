@@ -11,7 +11,8 @@ namespace TiendaWeb.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Cliente
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -19,10 +20,18 @@ namespace TiendaWeb.Models
         {
             this.Venta = new HashSet<Venta>();
         }
-    
+        [Key]
         public int IdCliente { get; set; }
+        [Display(Name = "RUT")]
+        [Required(ErrorMessage = "Rut es obligatorio")]
         public string Rut { get; set; }
+        [Display(Name = "Cliente")]
+        [Required(ErrorMessage = "Nombre es obligatorio")]
+        [MaxLength(100, ErrorMessage = "El nombre no puede tener más de 100 caracteres")]
         public string Nombre { get; set; }
+        [Display(Name = "Apellido")]
+        [Required(ErrorMessage = "Apellido es obligatorio")]
+        [MaxLength(100, ErrorMessage = "El apellido no puede tener más de 100 caracteres")]
         public string Apellidos { get; set; }
         public string Direccion { get; set; }
         public int Celular { get; set; }

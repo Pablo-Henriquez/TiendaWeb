@@ -20,7 +20,7 @@ namespace TiendaWeb.Models
         {
             this.Juego = new HashSet<Juego>();
         }
-    
+        [Key]
         public int IdPlataforma { get; set; }
         [Display(Name = "Plataforma")]
         [Required]

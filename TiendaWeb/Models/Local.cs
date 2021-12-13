@@ -11,7 +11,8 @@ namespace TiendaWeb.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Local
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -20,9 +21,14 @@ namespace TiendaWeb.Models
             this.OrdenCompra = new HashSet<OrdenCompra>();
             this.Stock = new HashSet<Stock>();
         }
-    
+        [Key]
         public int IdLocal { get; set; }
+        [Display(Name = "Local")]
+        [Required(ErrorMessage = "Nombre es obligatorio")]
+        [MaxLength(50, ErrorMessage = "El mombre no puede tener más de 50 caracteres")]
         public string Nombre { get; set; }
+        [Display(Name = "Direción")]
+        [MaxLength(100, ErrorMessage = "La dirección no puede tener más de 100 caracteres")]
         public string Direccion { get; set; }
         public string Email { get; set; }
         public int Celular { get; set; }
