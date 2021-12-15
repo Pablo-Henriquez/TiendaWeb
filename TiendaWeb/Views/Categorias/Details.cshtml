@@ -1,4 +1,4 @@
-﻿@model TiendaWeb.Models.Compania
+﻿@model TiendaWeb.Models.Categoria
 
 <!DOCTYPE html>
 <html>
@@ -92,7 +92,8 @@
                 </div>
             </div>
 
-            <h2>Detalles compañía</h2>
+            <!-- Contenido -->
+            <h2>Detalles categoría</h2>
 
             <div>
                 <hr />
@@ -108,10 +109,9 @@
                 </dl>
             </div>
             <p>
-                @Html.ActionLink("Editar", "Edit", new { id = Model.IdCompania }) |
+                @Html.ActionLink("Editar", "Edit", new { id = Model.IdCategoria }) |
                 @Html.ActionLink("Volver", "Index")
             </p>
-
 
         </div>
     </div>
@@ -120,26 +120,26 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
     <script>
-        //MenuToggle
-        let toggle = document.querySelector('.toggle');
-        let navigation = document.querySelector('.navigation');
-        let main = document.querySelector('.main');
+		//MenuToggle
+		let toggle = document.querySelector('.toggle');
+		let navigation = document.querySelector('.navigation');
+		let main = document.querySelector('.main');
 
-        toggle.onclick = function () {
-            navigation.classList.toggle('active');
-            main.classList.toggle('active');
-        }
+		toggle.onclick = function(){
+			navigation.classList.toggle('active');
+			main.classList.toggle('active');
+		}
 
 
-        //Hovered class
-        let list = document.querySelectorAll('.navigation li');
-        function activeLink() {
-            list.forEach((item) =>
-                item.classList.remove('hovered'));
-            this.classList.add('hovered');
-        }
-        list.forEach((item) =>
-            item.addEventListener('mouseover'), activeLink)
+		//Hovered class
+		let list = document.querySelectorAll('.navigation li');
+		function activeLink(){
+			list.forEach((item) =>
+			item.classList.remove('hovered'));
+			this.classList.add('hovered');
+		}
+		list.forEach((item) =>
+		item.addEventListener('mouseover'),activeLink)
     </script>
 </body>
 </html>

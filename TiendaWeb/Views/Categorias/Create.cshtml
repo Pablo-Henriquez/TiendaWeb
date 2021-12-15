@@ -1,4 +1,4 @@
-﻿@model TiendaWeb.Models.Compania
+﻿@model TiendaWeb.Models.Categoria
 
 <!DOCTYPE html>
 <html>
@@ -92,26 +92,35 @@
                 </div>
             </div>
 
-            <h2>Detalles compañía</h2>
+            <!-- Contenido -->
+            <h2>Agregar categoría</h2>
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-horizontal">
+                    <hr />
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Nombre, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Nombre, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Añadir" class="btn btn-default" />
+                        </div>
+                    </div>
+                </div>
+            }
 
             <div>
-                <hr />
-                <dl class="dl-horizontal">
-                    <dt>
-                        @Html.DisplayNameFor(model => model.Nombre)
-                    </dt>
-
-                    <dd>
-                        @Html.DisplayFor(model => model.Nombre)
-                    </dd>
-
-                </dl>
-            </div>
-            <p>
-                @Html.ActionLink("Editar", "Edit", new { id = Model.IdCompania }) |
                 @Html.ActionLink("Volver", "Index")
-            </p>
-
+            </div>
 
         </div>
     </div>
@@ -120,26 +129,26 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
     <script>
-        //MenuToggle
-        let toggle = document.querySelector('.toggle');
-        let navigation = document.querySelector('.navigation');
-        let main = document.querySelector('.main');
+		//MenuToggle
+		let toggle = document.querySelector('.toggle');
+		let navigation = document.querySelector('.navigation');
+		let main = document.querySelector('.main');
 
-        toggle.onclick = function () {
-            navigation.classList.toggle('active');
-            main.classList.toggle('active');
-        }
+		toggle.onclick = function(){
+			navigation.classList.toggle('active');
+			main.classList.toggle('active');
+		}
 
 
-        //Hovered class
-        let list = document.querySelectorAll('.navigation li');
-        function activeLink() {
-            list.forEach((item) =>
-                item.classList.remove('hovered'));
-            this.classList.add('hovered');
-        }
-        list.forEach((item) =>
-            item.addEventListener('mouseover'), activeLink)
+		//Hovered class
+		let list = document.querySelectorAll('.navigation li');
+		function activeLink(){
+			list.forEach((item) =>
+			item.classList.remove('hovered'));
+			this.classList.add('hovered');
+		}
+		list.forEach((item) =>
+		item.addEventListener('mouseover'),activeLink)
     </script>
 </body>
 </html>

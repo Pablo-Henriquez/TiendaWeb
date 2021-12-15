@@ -10,32 +10,44 @@
         <div class="navigation">
             <ul>
                 <li>
-                    <a href="#">
-                        <span class="icon"><ion-icon name="storefront-outline"></ion-icon></span>
-                        <span class="tittle">Paradox</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
+                    <a href="~/Inicio/Index">
                         <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
                         <span class="tittle">Inicio</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="~/Juegos/Index">
                         <span class="icon"><ion-icon name="game-controller-outline"></ion-icon></span>
                         <span class="tittle">Juegos</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="~/Categorias/Index">
+                        <span class="icon"><ion-icon name="library-outline"></ion-icon></span>
+                        <span class="tittle">Categorías</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="~/Plataformas/Index">
+                        <span class="icon"><ion-icon name="desktop-outline"></ion-icon></span>
+                        <span class="tittle">Plataformas</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="~/Companias/Index">
+                        <span class="icon"><ion-icon name="business-outline"></ion-icon></span>
+                        <span class="tittle">Compañía</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="~/Stocks/Index">
                         <span class="icon"><ion-icon name="layers-outline"></ion-icon></span>
                         <span class="tittle">Stock</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
-                        <span class="icon"><ion-icon name="business-outline"></ion-icon></span>
+                    <a href="~/Locals/Index">
+                        <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
                         <span class="tittle">Local</span>
                     </a>
                 </li>
@@ -76,21 +88,122 @@
                 <div class="toggle">
                     <ion-icon name="menu-outline"></ion-icon>
                 </div>
-                <!-- Search -->
-                <div class="search">
-                    <label>
-                        <input type="text" placeholder="Search Here">
-                        <ion-icon name="search-outline"></ion-icon>
-                    </label>
-                </div>
-                <!-- UserImg -->
-                <div class="user">
-                    <img src="user.jpg">
+            </div>
 
+            <!--  -->
+            <div class="cardBox">
+                <div class="card">
+                    <div>
+                        <div class="number">1.054</div>
+                        <div class="cardName">Daily Views</div>
+                    </div>
+                    <div class="iconBox">
+                        <ion-icon name="newspaper-outline"></ion-icon>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="number">%%</div>
+                        <div class="cardName">Sales</div>
+                    </div>
+                    <div class="iconBox">
+                        <ion-icon name="arrow-down-outline"></ion-icon>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="number">++</div>
+                        <div class="cardName">New</div>
+                    </div>
+                    <div class="iconBox">
+                        <ion-icon name="add-outline"></ion-icon>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="number">+>>></div>
+                        <div class="cardName">Coming soon</div>
+                    </div>
+                    <div class="iconBox">
+                        <ion-icon name="hourglass-outline"></ion-icon>
+                    </div>
                 </div>
             </div>
-        </div>
 
+            <!-- Details -->
+            <div class="details">
+                <div class="recentOrders">
+                    <div class="cardHeader">
+                        <h2>Recent orders</h2>
+                        <a href="#" class="btn">View All</a>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>Game</td>
+                                <td>Price</td>
+                                <td>Payment</td>
+                                <td>Status</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Mortal Kombat XII</td>
+                                <td>$45000</td>
+                                <td>Paid</td>
+                                <td><span class="status pending">Pending</span></td>
+                            </tr>
+                            <tr>
+                                <td>Fallout 76</td>
+                                <td>$20000</td>
+                                <td>Return</td>
+                                <td><span class="status return">Return</span></td>
+                            </tr>
+                            <tr>
+                                <td>Resident evil 3</td>
+                                <td>$30000</td>
+                                <td>Due</td>
+                                <td><span class="status in progress">In progress</span></td>
+                            </tr>
+                            <tr>
+                                <td>Resident evil VIII</td>
+                                <td>$30000</td>
+                                <td>Paid</td>
+                                <td><span class="status delivered">Delivered</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Item Rigth -->
+                <div class="recentCustomers">
+                    <div class="cardHeader">
+                        <h2>Comprados recientemente</h2>
+                    </div>
+                    <table>
+                        <!-- Aplicar Foreach -->
+                        <tr>
+                            <td width="60px"><div class="imgBox"><img src="~/Content/Game.jpg"></div></td>
+                            <td><h4>Nombre</h4><span>Fecha</span></td>
+                        </tr>
+                        <tr>
+                            <td width="60px"><div class="imgBox"><img src="~/Content/Game2.jpg"></div></td>
+                            <td><h4>Nombre</h4><span>Fecha</span></td>
+                        </tr>
+                        <tr>
+                            <td width="60px"><div class="imgBox"><img src="~/Content/Game.jpg"></div></td>
+                            <td><h4>Nombre</h4><span>Fecha</span></td>
+                        </tr>
+                        <tr>
+                            <td width="60px"><div class="imgBox"><img src="~/Content/Game2.jpg"></div></td>
+                            <td><h4>Nombre</h4><span>Fecha</span></td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+
+        </div>
     </div>
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
@@ -103,7 +216,8 @@
         let main = document.querySelector('.main');
 
         toggle.onclick = function () {
-            navigation.classList.toggle('active')
+            navigation.classList.toggle('active');
+            main.classList.toggle('active');
         }
 
 
